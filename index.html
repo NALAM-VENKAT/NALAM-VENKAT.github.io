@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tourism</title>
+  <style>
+    body {
+      font-family: 'Times New Roman';
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .box {
+      position: relative;
+      width: 300px;
+      text-align: center;
+    }
+
+    .box img {
+      width: 100%;
+      height: auto;
+      object-fit:contain;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.5s ease-in-out;
+      margin: 5%;
+
+    }
+    .box img:hover{
+      transform: translateX(-5px) translateY(-5px);
+      zoom:110%
+    }
+
+    .label-box {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 10px;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .label-box:hover {
+      background-color: #555;
+    }
+
+    .popup-text {
+      position: relative;
+      top: 50px;
+      /* left: 100%; */
+      transform: translateX(20px);
+      background-color: black;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 8px;
+      white-space: normal;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      z-index: 2;
+    }
+
+    .label-box:hover + .popup-text {
+      opacity: 0.8;
+      visibility: visible;
+    }
+    
+    
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("https://static.displate.com/857x1200/displate/2022-10-06/a2fdbecfbee64c58963ecee7ae16fdd7_d8a6b4bce8d4ab98faae2602daa962c9.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      opacity: 0.4;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: black;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <div class="content">
+    <h1>MOST VISITED PLACES IN INDIA</h1>
+  </div>
+
+<!-- Row 1 -->
+<div class="container">
+  <div class="box">
+    <a href="https://www.tajmahal.gov.in/" target="_blank">
+      <img src="https://www.thoughtco.com/thmb/1g2-jnNGFo6SMikINMmHOmKsBMI=/3865x2576/filters:fill(auto,1)/sunrise-at-taj-mahal--agra--uttar-pradash--india-583682538-5b91840bc9e77c0050bdc67b.jpg" alt="Taj Mahal">
+    </a>
+    <div class="label-box">More Info</div>
+    <div class="popup-text">Taj Mahal – A symbol of love in Agra.</div>
+  </div>
+
+  <div class="box">
+    <a href="https://karnatakatourism.org/tour-item/hampi/" target="_blank">
+      <img src="https://www.holidaymonk.com/wp-content/uploads/2020/10/Vastuchitra_Stone-Chariot-Hampi.jpg" alt="Hampi">
+    </a>
+    <div class="label-box">More Info</div>
+    <div class="popup-text">Hampi – Capital of Vijayanagara Empire.</div>
+  </div>
+
+  <div class="box">
+    <a href="https://jaipurtourism.co.in/jantar-mantar-jaipur" target="_blank">
+      <img src="https://lh3.googleusercontent.com/-DapaOAT7ZYM/YI1HMWzXIqI/AAAAAAABhlY/ZERm90N4gj08AoIiNm8FGOLm7-_t4tAhACLcBGAsYHQ/s16000/thw_jm_17.jpeg" alt="Jantar Mantar">
+    </a>
+    <div class="label-box">More Info</div>
+    <div class="popup-text">Jantar Mantar – Astronomical observatory, Jaipur.</div>
+  </div>
+</div>
+
+<!-- Row 2 -->
+<div class="container">
+  <div class="box">
+    <a href="https://asi.nic.in/konark-sun-temple/" target="_blank">
+      <img src="https://cdn.enjoytravel.com/img/travel-news/sun-temple-at-konark-is-from-the-13th-century.jpg" alt="Sun Temple, Konark">
+    </a>
+    <div class="label-box">More Info</div>
+    <div class="popup-text">Konark Sun Temple – 13th century marvel.</div>
+  </div>
+
+  <div class="box">
+    <a href="https://karnatakatourism.org/tour-item/hampi/" target="_blank">
+      <img src="https://external-preview.redd.it/8lN0aB_bNQfK4-o1UInrBF3Xwr94l8gSO5QBcU6egCU.jpg?auto=webp&s=9049b8890e144d3cad9bd023e11b9518cc385d20" alt="Hampi">
+    </a>
+    <div class="label-box">More Info</div>
+    <div class="popup-text">Hampi – UNESCO World Heritage Site.</div>
+  </div>
+
+  <div class="box">
+    <a href="https://asi.nic.in/qutb-minar/" target="_blank">
+      <img src="https://th.bing.com/th/id/OIP.3mw1X9tU5lsgA1a47VtCOwHaF7?rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3" alt="Qutub Minar">
+    </a>
+    <div class="label-box">More Info</div>
+    <div class="popup-text">Qutub Minar – Tallest stone tower in India.</div>
+  </div>
+</div>
+
+<!-- Row 3 -->
+<div class="container">
+  <div class="box">
+    <a href="https://whc.unesco.org/en/list/250" target="_blank">
+      <img src="https://i.redd.it/omywrnf0nqx41.jpg" alt="Brihadeeswara Temple">
+    </a>
+    <div class="label-box">More Info</div>
+    <div class="popup-text">Thanjavur – Brihadeeswara Temple, Chola Dynasty.</div>
+  </div>
+
+  <div class="box">
+    <a href="https://www.tourism.rajasthan.gov.in/hawa-mahal.html" target="_blank">
+      <img src="https://1.bp.blogspot.com/-s3iit77Tqgw/VWmmXSIITCI/AAAAAAAACF8/dDLL6xduWfQ/s1600/Hawa+mahal.jpg" alt="Hawa Mahal">
+    </a>
+    <div class="label-box">More Info</div>
+    <div class="popup-text">Hawa Mahal – Palace of Winds, Jaipur.</div>
+  </div>
+
+  <div class="box">
+    <a href="https://www.mysorepalace.gov.in/" target="_blank">
+      <img src="https://images.fineartamerica.com/images-medium-large-5/mysore-palace-at-night-dethan-punalur.jpg" alt="Mysore Palace">
+    </a>
+    <div class="label-box">More Info</div>
+    <div class="popup-text">Mysore Palace – Royal palace with Indo-Saracenic style.</div>
+  </div>
+</div>
+
+</body>
+</html>
